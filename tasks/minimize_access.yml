@@ -18,6 +18,7 @@
     path: '{{ item.stat.path }}'
     mode: 'go-w'
     recurse: 'yes'
+    follow: 'no'
   when: item.stat.isdir
   with_items: '{{ minimize_access_directories.results }}'
 
